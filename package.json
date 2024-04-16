@@ -1,0 +1,11 @@
+{
+  "name": "decoment",
+  "version": "1.0.0",
+  "description": "Decoment será una aplicación diseñada para ayudar a los desarrolladores a documentar su código de programación de manera muy fácil, sin importar el lenguaje de programación que estén utilizando.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Axel Velasco Chavez",
+  "license": "ISC"
+}

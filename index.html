@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decoment - Documenta tu codigo con IA</title>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <h1 class="headerTitle">Decoment</h1>
+    </header>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- SECTION Documentation -->
+        <section class="section createDocumentation">
+            
+            <!-- FUNCTION -->
+            <div class="sectionFunction">
+                <h2 class="subtitle">FUNCIÓN</h2>
+                <textarea class="containerFunction"></textarea>
+            </div>
+
+            <!-- DESCRIPTION -->
+            <div class="sectionDescription">
+                <h2 class="subtitle">Descripción</h2>
+                <textarea class="containerDescription"></textarea>
+            </div>
+
+            <!-- ATTRIBUTES -->
+            <div class="sectionAttributes">
+                <h2 class="subtitle">Atributos</h2>
+                <div class="containerAttributes">
+                    <input class="attributesName" type="text">
+                    <input class="attributesType" type="text">
+                    <input class="attributesDescription" type="text">
+                </div>
+            </div>
+
+            <!-- EXAMPLES -->
+            <div class="sectionExamples">
+                <h2 class="subtitle">Ejemplos de uso</h2>
+                <div class="containerExamples">
+                    <p class="exampleDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ab, inventore velit reiciendis accusamus sequi labore nulla beatae eveniet dolor.</p>
+                    <textarea class="containerExample"></textarea>
+                </div>
+            </div>
+
+            <!-- ADD FUNCTION -->
+            <div class="sectionAddFunction">
+                <button class="button">+</button>
+            </div>
+
+        </section>
+
+        <!-- DOWNLOAD DOCUMENTS -->
+        <section class="section downloadDocuments">
+            <!-- DESCRIPTION -->
+            <div class="descriptionDownloadDocuments">
+                <p>Descarga los archivos en el siguiente boton, copia el contenido JSON generado abajo, pegalo en el documento “data.json”, que esta en el archivo que descargaste anteriormente, puedes usar Netlify para subir el contenido de tu documentacion (a menos de que seas desarrollador no modifiques los demas documentos ya que puede verse reflejado en el mal funcionamiento)</p>
+                <button class="button">Descargar documentos</button>
+            </div>
+
+            <div class="sectionJSON">
+                <textarea class="containerJSON"></textarea>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>Diseñado y desarrollado por Axel Velasco Chavez</p>
+    </footer>
+
+</body>
+</html>
