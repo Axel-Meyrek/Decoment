@@ -85,7 +85,7 @@ input{
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    gap: 2em;
+    gap: 5em;
     padding: 5.5em 1em;
     overflow: hidden;
     min-height: 80vh;
@@ -164,4 +164,5 @@ input{
 .footer p{
     color: var(--white);
     font-weight: var(--semiBold);
+    text-align: center;
 }

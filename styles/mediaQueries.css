@@ -1,0 +1,16 @@
+@media (max-width: 950px) {
+    .main{
+        flex-direction: column;
+        align-items: center;
+        gap: 8em;
+    }
+
+    .createDocumentation, .downloadDocuments{
+        width: 100%;
+        max-width: 700px;
+    }
+
+    textarea, input, .button{
+        max-width: none;
+    }
+}
