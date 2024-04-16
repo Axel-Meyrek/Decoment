@@ -43,7 +43,18 @@ body{
 
 textarea{
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    padding: 1em;
+}
+
+input{
+    width: 30%;
+    border: 2px solid var(--black);
+    border-radius: 5px;
+    padding: .5em;
+    text-align: center;
 }
 
 .subtitle{
@@ -59,7 +70,7 @@ textarea{
     border-radius: 5px;
     color: var(--white);
     width: 100%;
-    max-width: 500px;
+    max-width: 550px;
     border: 1px solid transparent;
     transition: color, scale,  .3s;
 }
@@ -71,13 +82,13 @@ textarea{
 
 .main{
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     gap: 2em;
-    padding: 0 1em;
+    padding: 5.5em 1em;
     overflow: hidden;
-    padding-top: 80px;
+    min-height: 80vh;
 }
 
 
@@ -110,4 +121,47 @@ textarea{
 .iconHeader{
     color: var(--white);
     font-size: var(--extraLarge);
+}
+
+/* SECTION Documentation */
+.createDocumentation, .downloadDocuments{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 550px;
+    width: 50%;
+}
+
+/* sectionAttributes */
+.sectionAttributes{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.containerAttributes{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* sectionExamples */
+.sectionExamples{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* FOOTER */
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--colorMain);
+    padding: 4em;
+}
+
+.footer p{
+    color: var(--white);
+    font-weight: var(--semiBold);
 }
