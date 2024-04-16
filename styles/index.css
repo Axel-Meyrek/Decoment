@@ -1,0 +1,24 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* VARIABLES */
+:root{
+    /* Colores */
+    --white: white;
+    --black: black;
+    --colorMain: #977ECB;
+    --colorGrey: #F2F1F1;
+    /* font-weight */
+    --regular: 400;
+    --medium: 500;
+    --semiBold: 600;
+    --bold: 700;
+    /* font-family */
+    --fontMain: "Open Sans", sans-serif;
+    /* font-size */
+    --small: 1rem;
+    --large: 1.2rem;
+    --extraLarge: 1.5rem;
+    /* Shadows */
+    --shadowButtons: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
