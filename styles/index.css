@@ -151,6 +151,13 @@ input{
     gap: 10px;
 }
 
+/* Download Documents */
+.descriptionDownloadDocuments{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 /* FOOTER */
 .footer{
     display: flex;
