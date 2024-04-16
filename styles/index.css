@@ -4,7 +4,7 @@
 /* VARIABLES */
 :root{
     /* Colores */
-    --white: white;
+    --white: #FCFCFC;
     --black: black;
     --colorMain: #977ECB;
     --colorGrey: #F2F1F1;
@@ -16,9 +16,65 @@
     /* font-family */
     --fontMain: "Open Sans", sans-serif;
     /* font-size */
-    --small: 1rem;
-    --large: 1.2rem;
+    --small: .9rem;
+    --large: 1rem;
     --extraLarge: 1.5rem;
     /* Shadows */
     --shadowButtons: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* NORMALIZATION */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--black);
+    font-family: var(--fontMain);
+    list-style: none;
+    text-decoration: none;
+    font-size: var(--small);
+    font-weight: var(--regular);
+    line-height: 180%;
+}
+
+body{
+    background-color: white;
+}
+
+textarea{
+    width: 100%;
+    max-width: 500px;
+}
+
+.subtitle{
+    font-size: var(--large);
+    font-weight: var(--semiBold);
+}
+
+.button{
+    background-color: var(--colorMain);
+    border: none;
+    box-shadow: var(--shadowButtons);
+    padding: 1em;
+    border-radius: 5px;
+    color: var(--white);
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid transparent;
+    transition: color, scale,  .3s;
+}
+
+.button:hover{
+    background-color: #7055aa;
+    scale: 1.01;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2em;
+    padding: 0 1em;
+    overflow: hidden;
 }
