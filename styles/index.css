@@ -77,4 +77,37 @@ textarea{
     gap: 2em;
     padding: 0 1em;
     overflow: hidden;
+    padding-top: 80px;
+}
+
+
+/* HEADER */
+.header{
+    background-color: var(--colorMain);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: var(--shadowButtons);
+}
+
+.headerContainerItems{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: .5em;
+}
+
+.headerTitle{
+    color: var(--white);
+    font-size: var(--extraLarge);
+    font-weight: var(--bold);
+    text-shadow: var(--shadowButtons);
+}
+
+.iconHeader{
+    color: var(--white);
+    font-size: var(--extraLarge);
 }
