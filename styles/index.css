@@ -8,6 +8,8 @@
     --black: black;
     --colorMain: #977ECB;
     --colorGrey: #F2F1F1;
+    --colorAttributeName: #AA5D00;
+    --colorAttributeType: #977ECB;
     /* font-weight */
     --regular: 400;
     --medium: 500;
@@ -41,12 +43,11 @@ body{
     background-color: white;
 }
 
-textarea{
+.editorLine{
     width: 100%;
-    max-width: 550px;
     border: 2px solid var(--black);
     border-radius: 5px;
-    padding: 1em;
+    font-weight: var(--semiBold);
 }
 
 input{
@@ -88,7 +89,7 @@ input{
     gap: 5em;
     padding: 5.5em 1em;
     overflow: hidden;
-    min-height: 80vh;
+    min-height: 90vh;
 }
 
 
@@ -144,11 +145,25 @@ input{
     justify-content: space-between;
 }
 
+.attributesName{
+    color: #AA5D00;
+}
+
+.attributesType{
+    color: var(--colorAttributeType)
+}
+
 /* sectionExamples */
 .sectionExamples{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.containerExamples{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /* Download Documents */
@@ -166,6 +181,7 @@ input{
     justify-content: center;
     background-color: var(--colorMain);
     padding: 4em;
+    box-shadow: 0 0 -10px rgba(0, 0, 0, 0.25);
 }
 
 .footer p{
