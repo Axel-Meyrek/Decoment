@@ -1,33 +1,36 @@
 @media (max-width: 950px) {
-    .main{
+    .main {
         flex-direction: column;
         align-items: center;
         gap: 8em;
     }
 
-    .createDocumentation, .downloadDocuments{
+    .createDocumentation,
+    .downloadDocuments {
         width: 100%;
         max-width: 700px;
     }
 
-    textarea, input, .button, .editorCode{
+    textarea,
+    input,
+    .button,
+    .editorCode {
         max-width: none;
     }
 
-    .modalEditor_title{
+    .modalEditor_title {
         font-size: var(--extraLarge);
     }
 }
 
 @media (max-width: 410px) {
-    .modalEditor_title{
+    .modalEditor_title {
         font-size: 1.2rem;
     }
 }
 
 @media (max-width: 335px) {
-    .modalEditor_title{
+    .modalEditor_title {
         font-size: 1rem;
     }
 }
-
