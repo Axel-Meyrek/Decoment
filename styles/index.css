@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
 /* VARIABLES */
-:root{
+:root {
     /* Colores */
     --white: #FCFCFC;
     --black: black;
@@ -10,6 +10,7 @@
     --colorGrey: #F2F1F1;
     --colorAttributeName: #AA5D00;
     --colorAttributeType: #977ECB;
+    --colorRed: rgb(224, 106, 106);
     /* font-weight */
     --regular: 400;
     --medium: 500;
@@ -26,7 +27,7 @@
 }
 
 /* NORMALIZATION */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -39,35 +40,36 @@
     line-height: 180%;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     height: .8rem;
     width: .8rem;
 }
 
-::-webkit-scrollbar-track{
+::-webkit-scrollbar-track {
     background-color: transparent;
 }
 
-::-webkit-scrollbar-thumb{
+::-webkit-scrollbar-thumb {
     background-color: var(--colorMain);
     border-radius: 5rem;
 }
 
-body{
-    background-color: white;
+body {
+    background-color: var(--white);
 }
 
-.editorLine{
+.editorLine {
     width: 100%;
     border: 2px solid var(--black);
     border-radius: 5px;
     font-weight: var(--semiBold);
 }
 
-input{
+input {
     width: 30%;
     border: 2px solid var(--black);
     border-radius: 5px;
@@ -75,12 +77,12 @@ input{
     text-align: center;
 }
 
-.subtitle{
+.subtitle {
     font-size: var(--large);
     font-weight: var(--semiBold);
 }
 
-.button{
+.button {
     background-color: var(--colorMain);
     border: none;
     box-shadow: var(--shadowButtons);
@@ -90,15 +92,15 @@ input{
     width: 100%;
     max-width: 550px;
     border: 1px solid transparent;
-    transition: color, scale,  .3s;
+    transition: color, scale, .3s;
 }
 
-.button:hover{
+.button:hover {
     background-color: #7055aa;
     scale: 1.01;
 }
 
-.main{
+.main {
     display: flex;
     justify-content: space-between;
     max-width: 1200px;
@@ -111,16 +113,17 @@ input{
 
 
 /* HEADER */
-.header{
+.header {
     background-color: var(--colorMain);
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     box-shadow: var(--shadowButtons);
+    z-index: 50;
 }
 
-.headerContainerItems{
+.headerContainerItems {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -129,20 +132,21 @@ input{
     padding: .5em;
 }
 
-.headerTitle{
+.headerTitle {
     color: var(--white);
     font-size: var(--extraLarge);
     font-weight: var(--bold);
     text-shadow: var(--shadowButtons);
 }
 
-.iconHeader{
+.iconHeader {
     color: var(--white);
     font-size: var(--extraLarge);
 }
 
 /* SECTION Documentation */
-.createDocumentation, .downloadDocuments{
+.createDocumentation,
+.downloadDocuments {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -151,56 +155,56 @@ input{
 }
 
 /* sectionAttributes */
-.sectionAttributes{
+.sectionAttributes {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.containerAttributes{
+.containerAttributes {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 10px;
 }
 
-.attributesName{
+.attributesName {
     width: 20%;
     color: #AA5D00;
 }
 
-.attributesType{
+.attributesType {
     width: 20%;
     color: var(--colorAttributeType)
 }
 
-.attributesDescription{
+.attributesDescription {
     width: 50%;
     color: var(--black);
 }
 
 /* sectionExamples */
-.sectionExamples{
+.sectionExamples {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.containerExamples{
+.containerExamples {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 /* Download Documents */
-.descriptionDownloadDocuments{
+.descriptionDownloadDocuments {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
 /* FOOTER */
-.footer{
+.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -208,10 +212,64 @@ input{
     background-color: var(--colorMain);
     padding: 4em;
     box-shadow: 0 0 -10px rgba(0, 0, 0, 0.25);
+    z-index: 50;
 }
 
-.footer p{
+.footer p {
     color: var(--white);
     font-weight: var(--semiBold);
     text-align: center;
+}
+
+/* MODAL */
+.modalEditor {
+    background-color: #FCFCFC;
+    opacity: 1;
+    background-image: radial-gradient(#977ECB 0.75px, transparent 0.75px), radial-gradient(#977ECB 0.75px, #FCFCFC 0.75px);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    min-height: 80vh;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    z-index: 10;
+    display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.modalEditor_title {
+    font-size: 2.1rem;
+    font-weight: var(--bold);
+    color: var(--colorMain);
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    max-width: 550px;
+}
+
+.editorCode {
+    max-width: 550px;
+    width: 100%;
+    border: 4px solid var(--black);
+    padding: 1em;
+    border-radius: 10px;
+}
+
+.button--cancel {
+    background-color: var(--colorRed);
+}
+
+.button--cancel:hover {
+    background-color: rgb(177, 55, 55);
 }

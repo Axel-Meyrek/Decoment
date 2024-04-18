@@ -10,7 +10,24 @@
         max-width: 700px;
     }
 
-    textarea, input, .button{
+    textarea, input, .button, .editorCode{
         max-width: none;
     }
+
+    .modalEditor_title{
+        font-size: var(--extraLarge);
+    }
 }
+
+@media (max-width: 410px) {
+    .modalEditor_title{
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 335px) {
+    .modalEditor_title{
+        font-size: 1rem;
+    }
+}
+
