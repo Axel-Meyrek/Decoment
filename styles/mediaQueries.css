@@ -13,6 +13,7 @@
 
     textarea,
     input,
+    .editorDescription,
     .button,
     .editorCode {
         max-width: none;

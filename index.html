@@ -25,60 +25,7 @@
     <main class="main">
 
         <!-- SECTION Documentation -->
-        <section class="section createDocumentation">
-
-            <!-- FUNCTION -->
-            <div class="sectionFunction">
-                <h2 class="subtitle">FUNCIÓN</h2>
-                <pre><code class="language-javascript editorLine"></code></pre>
-            </div>
-
-            <!-- DESCRIPTION -->
-            <div class="sectionDescription">
-                <h2 class="subtitle">DESCRIPCIÓN</h2>
-                <pre><code class="language-javascript editorLine"></code></pre>
-            </div>
-
-            <!-- ATTRIBUTES -->
-            <div class="sectionAttributes">
-                <h2 class="subtitle">ATRIBUTOS</h2>
-                <div class="containerAttributes">
-                    <input class="attributesName" type="text">
-                    <input class="attributesType" type="text">
-                    <input class="attributesDescription" type="text">
-                </div>
-                <div class="containerAttributes">
-                    <input class="attributesName" type="text">
-                    <input class="attributesType" type="text">
-                    <input class="attributesDescription" type="text">
-                </div>
-                <div class="containerAttributes">
-                    <input class="attributesName" type="text">
-                    <input class="attributesType" type="text">
-                    <input class="attributesDescription" type="text">
-                </div>
-            </div>
-
-            <!-- EXAMPLES -->
-            <div class="sectionExamples">
-                <h2 class="subtitle">EJEMPLOS DE USO</h2>
-                <div class="containerExamples">
-                    <p class="exampleDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ab,
-                        inventore velit reiciendis accusamus sequi labore nulla beatae eveniet dolor.</p>
-                    <pre><code class="language-javascript editorLine"></code></pre>
-                </div>
-                <div class="containerExamples">
-                    <p class="exampleDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ab,
-                        inventore velit reiciendis accusamus sequi labore nulla beatae eveniet dolor.</p>
-                    <pre><code class="language-javascript editorLine"></code></pre>
-                </div>
-            </div>
-
-            <!-- ADD FUNCTION -->
-            <div class="sectionAddFunction">
-                <button class="button button--addFunction">Agregar otra funcion</button>
-            </div>
-
+        <section id="createDocumentation" class="section createDocumentation"><!-- SE RENDERIZA DE FORMA DINAMICA -->
         </section>
 
         <!-- DOWNLOAD DOCUMENTS -->
@@ -93,7 +40,7 @@
             </div>
 
             <div class="sectionJSON">
-                <pre><code class="language-javascript editorLine"></code></pre>
+                <pre><code class="language-javascript editorLineJSON"></code></pre>
             </div>
         </section>
 
@@ -104,17 +51,17 @@
     </footer>
 
     <!-- MODAL -->
-    <section class="modalEditor ">
+    <section id="modalEditFunction" class="modalEditor ">
         <h2 class="modalEditor_title">PEGA UNA DE TUS FUNCIONES AQUI PARA DOCUMENTARLA POR TI</h2>
         <textarea class="editorCode" name="" id="" cols="30" rows="10"></textarea>
         <button class="button">Generar Documentación</button>
-        <button class="button button--cancel">Cancelar</button>
+        <button id="btnCloseModalEditFunction" class="button button--cancel">Cancelar</button>
     </section>
 
-    <section class="modalEditor">
+    <section id="modalEditGeneral" class="modalEditor">
         <textarea class="editorCode" name="" id="" cols="30" rows="10"></textarea>
         <button class="button">Editar</button>
-        <button class="button button--cancel">Cancelar</button>
+        <button id="btnCloseModalEditGeneral" class="button button--cancel">Cancelar</button>
     </section>
 
 
@@ -126,6 +73,7 @@
     <script src="https://kit.fontawesome.com/7b35ff6dce.js" crossorigin="anonymous"></script>
     <!-- MY SCRIPTS -->
     <script src="js/devScript.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 
 </html>

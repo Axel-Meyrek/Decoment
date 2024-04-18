@@ -62,7 +62,8 @@ body {
     background-color: var(--white);
 }
 
-.editorLine {
+.editorLine,
+.editorLineJSON {
     width: 100%;
     border: 2px solid var(--black);
     border-radius: 5px;
@@ -242,11 +243,13 @@ input {
     justify-content: center;
     gap: 30px;
     z-index: 10;
-    display: none;
+    transform: translate(100%);
+    transition: transform .5s;
 }
 
 .active {
     display: flex;
+    transform: translate(0);
 }
 
 .modalEditor_title {
@@ -258,12 +261,13 @@ input {
     max-width: 550px;
 }
 
-.editorCode {
+.editorCode,
+.editorDescription {
     max-width: 550px;
     width: 100%;
-    border: 4px solid var(--black);
+    border: 2px solid var(--black);
     padding: 1em;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 .button--cancel {
