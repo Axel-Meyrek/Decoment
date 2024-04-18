@@ -10,7 +10,9 @@ export const showEditorFunction = () => {
 
 export const addEventEditors = () => {
     const editors = document.querySelectorAll('.editorLine')
-    editors.forEach(editor => editor.addEventListener('click', showEditorGeneral))
+    editors.forEach(editor => {
+        editor.addEventListener('click', showEditorGeneral)
+    })
 }
 
 const renderFunction = () => {
@@ -70,7 +72,7 @@ const renderExamples = () => {
             <div class="containerExamples">
                 <p class="exampleDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ab,
                     inventore velit reiciendis accusamus sequi labore nulla beatae eveniet dolor.</p>
-                <pre><code class="language-javascript editorLine"></code></pre>
+                <pre><code class="language-javascript editorLine" ></code></pre>
             </div>
         </div>`
     )
@@ -80,7 +82,7 @@ const renderBtnAddFunction = () => {
     return (
         `<!-- ADD FUNCTION -->
         <div class="sectionAddFunction">
-            <button id="btnAddFunction" class="button button--addFunction">Agregar otra funcion</button>
+            <button class="button button--addFunction btnAddFunction">Agregar otra funcion</button>
         </div>`
     )
 }
@@ -96,6 +98,50 @@ export const renderSectionFunction = () => {
     
     /* EVENTOS */
     addEventEditors()
+
+    addEventBtnOtherFunction()
+
+    showEditorFunction()
+
+    cargarDatos()
+
+    hljs.highlightAll()
+}
+
+const addEventBtnOtherFunction = () => {
+    const btnAddFunction = document.querySelectorAll('.btnAddFunction')
+    btnAddFunction.forEach(btn => btn.addEventListener('click', showEditorFunction))
+}
+
+export const cargarDatos = () => {
+    const editorsLine = document.querySelectorAll('.editorLine')
+    
+    const attributesName = document.querySelectorAll('.attributesName')
+    
+    const attributesType = document.querySelectorAll('.attributesType')
+    
+    const attributesDescription = document.querySelectorAll('.attributesDescription')
+    
+    editorsLine.forEach(editorLine => editorLine.textContent = `function sumar(num1, num2) {
+        return num1 + num2;
+    }
+    // Ejemplo de uso:
+    var resultado = sumar(5, 3);
+    console.log(resultado); // Imprimirá 8
+    `)
+    
+    attributesName.forEach(attribute => attribute.value = 'nombre')
+    attributesType.forEach(attribute => attribute.value = 'String')
+    attributesDescription.forEach(attribute => attribute.value = 'Un poco de texto')
+
+    const editorLineJSON = document.querySelector('.editorLineJSON ')
+    editorLineJSON.textContent = `function sumar(num1, num2) {
+        return num1 + num2;
+    }
+    // Ejemplo de uso:
+    var resultado = sumar(5, 3);
+    console.log(resultado); // Imprimirá 8
+    `
 }
 
 

@@ -78,11 +78,11 @@
 
 
     <!-- MODAL -->
-    <section id="modalEditFunction" class="modalEditor ">
+    <section id="modalEditFunction" class="modalEditor active ">
         <h2 class="modalEditor_title">PEGA UNA DE TUS FUNCIONES AQUI PARA DOCUMENTARLA POR TI</h2>
         <textarea class="editorCode" name="" id="" cols="30" rows="10"></textarea>
-        <button class="button">Generar Documentación</button>
-        <button class="button button--cancel">Cancelar</button>
+        <button id="btnCreateNewFunction" class="button">Generar Documentación</button>
+        <button id="btnCloseCreateFunction" class="button button--cancel">Cancelar</button>
     </section>
 
 
@@ -101,14 +101,14 @@
 
 
 
-    <!-- SCRIPT CODELINE -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
     <!-- FONTAWESOME -->
     <script src="https://kit.fontawesome.com/7b35ff6dce.js" crossorigin="anonymous"></script>
     <!-- MY SCRIPTS -->
-    <script src="js/devScript.js"></script>
+    <script type="module" src="js/devScript.js"></script>
     <script type="module" src="js/app.js"></script>
+    <!-- SCRIPT CODELINE -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll()</script>
 </body>
 
 </html>
